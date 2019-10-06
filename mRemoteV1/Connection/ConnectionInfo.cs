@@ -370,6 +370,10 @@ namespace mRemoteNG.Connection
         {
             ComPort = Settings.Default.ComPort;
             Speed = Settings.Default.Speed;
+            DataBits = Settings.Default.DataBits;
+            ParityBit = Settings.Default.ParityBit;
+            StopBit = Settings.Default.StopBit;
+            FlowControl = Settings.Default.FlowControl;
         }
 
         private void SetVncDefaults()

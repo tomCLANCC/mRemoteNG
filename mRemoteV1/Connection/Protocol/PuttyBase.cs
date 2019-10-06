@@ -76,7 +76,13 @@ namespace mRemoteNG.Connection.Protocol
 
                     if (PuttyProtocol == Putty_Protocol.serial)
                     {
-                        arguments.Add(InterfaceControl.Info.ComPort.ToString());
+                        arguments.Add($"com{InterfaceControl.Info.ComPort.ToString()}");
+                        arguments.Add("-sercfg");
+                        arguments.Add($"{InterfaceControl.Info.Speed}," +
+                            $"{InterfaceControl.Info.DataBits}," +
+                            $"{InterfaceControl.Info.ParityBit}," +
+                            $"{InterfaceControl.Info.StopBit}," +
+                            $"{InterfaceControl.Info.FlowControl}");
                     }
 
                     if (PuttyProtocol == Putty_Protocol.ssh)

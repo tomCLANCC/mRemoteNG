@@ -4776,6 +4776,15 @@ namespace mRemoteNG {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Any single digit from 5 to 9 sets the number of data bits.
+        /// </summary>
+        internal static string strPropertyDescriptionDataBits {
+            get {
+                return ResourceManager.GetString("strPropertyDescriptionDataBits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Put your notes or a description for the host here..
         /// </summary>
         internal static string strPropertyDescriptionDescription {
@@ -4884,6 +4893,15 @@ namespace mRemoteNG {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A single upper-case letter specifies the flow control: ‘N’ for none, ‘X’ for XON/XOFF, ‘R’ for RTS/CTS and ‘D’ for DSR/DTR..
+        /// </summary>
+        internal static string strPropertyDescriptionFlowControl {
+            get {
+                return ResourceManager.GetString("strPropertyDescriptionFlowControl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Choose a icon that will be displayed when connected to the host..
         /// </summary>
         internal static string strPropertyDescriptionIcon {
@@ -4925,6 +4943,15 @@ namespace mRemoteNG {
         internal static string strPropertyDescriptionPanel {
             get {
                 return ResourceManager.GetString("strPropertyDescriptionPanel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A single lower-case letter specifies the parity: ‘n’ for none, ‘o’ for odd, ‘e’ for even, ‘m’ for mark and ‘s’ for space..
+        /// </summary>
+        internal static string strPropertyDescriptionParityBit {
+            get {
+                return ResourceManager.GetString("strPropertyDescriptionParityBit", resourceCulture);
             }
         }
         
@@ -5181,6 +5208,15 @@ namespace mRemoteNG {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ‘1’, ‘1.5’ or ‘2’ sets the number of stop bits..
+        /// </summary>
+        internal static string strPropertyDescriptionStopBit {
+            get {
+                return ResourceManager.GetString("strPropertyDescriptionStopBit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Connect to the console session of the remote host..
         /// </summary>
         internal static string strPropertyDescriptionUseConsoleSession {
@@ -5379,6 +5415,15 @@ namespace mRemoteNG {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data Bits.
+        /// </summary>
+        internal static string strPropertyNameDataBits {
+            get {
+                return ResourceManager.GetString("strPropertyNameDataBits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         internal static string strPropertyNameDescription {
@@ -5487,6 +5532,15 @@ namespace mRemoteNG {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Flow Control.
+        /// </summary>
+        internal static string strPropertyNameFlowControl {
+            get {
+                return ResourceManager.GetString("strPropertyNameFlowControl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Icon.
         /// </summary>
         internal static string strPropertyNameIcon {
@@ -5528,6 +5582,15 @@ namespace mRemoteNG {
         internal static string strPropertyNamePanel {
             get {
                 return ResourceManager.GetString("strPropertyNamePanel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parity Bit.
+        /// </summary>
+        internal static string strPropertyNameParityBit {
+            get {
+                return ResourceManager.GetString("strPropertyNameParityBit", resourceCulture);
             }
         }
         
@@ -5771,6 +5834,15 @@ namespace mRemoteNG {
         internal static string strPropertyNameSpeed {
             get {
                 return ResourceManager.GetString("strPropertyNameSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stop Bit.
+        /// </summary>
+        internal static string strPropertyNameStopBit {
+            get {
+                return ResourceManager.GetString("strPropertyNameStopBit", resourceCulture);
             }
         }
         

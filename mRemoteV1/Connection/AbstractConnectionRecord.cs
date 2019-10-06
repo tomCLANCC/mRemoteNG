@@ -41,8 +41,13 @@ namespace mRemoteNG.Connection
         private HTTPBase.RenderingEngine _renderingEngine;
         private bool _useCredSsp;
         private bool _useVmId;
+
         private string _comSpeed = "";
         private string _comPort = "";
+        private string _dataBits = "";
+        private string _parityBit = "";
+        private string _stopBit = "";
+        private string _flowControl = "";
 
         private RDGatewayUsageMethod _rdGatewayUsageMethod;
         private string _rdGatewayHostname;
@@ -204,6 +209,46 @@ namespace mRemoteNG.Connection
         {
             get => GetPropertyValue("Speed", _comSpeed).Trim();
             set => SetField(ref _comSpeed, value?.Trim(), "Speed");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 2),
+        LocalizedAttributes.LocalizedDisplayName(nameof(Language.strPropertyNameDataBits)),
+        LocalizedAttributes.LocalizedDescription(nameof(Language.strPropertyDescriptionDataBits)),
+        UsedInProtocol(ProtocolType.Serial)]
+        public string DataBits
+        {
+            get => GetPropertyValue("DataBits", _dataBits).Trim();
+            set => SetField(ref _dataBits, value?.Trim(), "DataBits");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 2),
+        LocalizedAttributes.LocalizedDisplayName(nameof(Language.strPropertyNameParityBit)),
+        LocalizedAttributes.LocalizedDescription(nameof(Language.strPropertyDescriptionParityBit)),
+        UsedInProtocol(ProtocolType.Serial)]
+        public string ParityBit
+        {
+            get => GetPropertyValue("ParityBit", _parityBit).Trim();
+            set => SetField(ref _parityBit, value?.Trim(), "ParityBit");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 2),
+        LocalizedAttributes.LocalizedDisplayName(nameof(Language.strPropertyNameStopBit)),
+        LocalizedAttributes.LocalizedDescription(nameof(Language.strPropertyDescriptionStopBit)),
+        UsedInProtocol(ProtocolType.Serial)]
+        public string StopBit
+        {
+            get => GetPropertyValue("StopBit", _stopBit).Trim();
+            set => SetField(ref _stopBit, value?.Trim(), "StopBit");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 2),
+        LocalizedAttributes.LocalizedDisplayName(nameof(Language.strPropertyNameFlowControl)),
+        LocalizedAttributes.LocalizedDescription(nameof(Language.strPropertyDescriptionFlowControl)),
+        UsedInProtocol(ProtocolType.Serial)]
+        public string FlowControl
+        {
+            get => GetPropertyValue("FlowControl", _flowControl).Trim();
+            set => SetField(ref _flowControl, value?.Trim(), "FlowControl");
         }
 
         [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 2),

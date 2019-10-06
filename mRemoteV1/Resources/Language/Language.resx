@@ -2855,4 +2855,28 @@ Development Channel includes Alphas, Betas &amp; Release Candidates.</value>
   <data name="strSerial" xml:space="preserve">
     <value>Serial</value>
   </data>
+  <data name="strPropertyDescriptionDataBits" xml:space="preserve">
+    <value>Any single digit from 5 to 9 sets the number of data bits</value>
+  </data>
+  <data name="strPropertyDescriptionFlowControl" xml:space="preserve">
+    <value>A single upper-case letter specifies the flow control: ‘N’ for none, ‘X’ for XON/XOFF, ‘R’ for RTS/CTS and ‘D’ for DSR/DTR.</value>
+  </data>
+  <data name="strPropertyDescriptionParityBit" xml:space="preserve">
+    <value>A single lower-case letter specifies the parity: ‘n’ for none, ‘o’ for odd, ‘e’ for even, ‘m’ for mark and ‘s’ for space.</value>
+  </data>
+  <data name="strPropertyDescriptionStopBit" xml:space="preserve">
+    <value>‘1’, ‘1.5’ or ‘2’ sets the number of stop bits.</value>
+  </data>
+  <data name="strPropertyNameDataBits" xml:space="preserve">
+    <value>Data Bits</value>
+  </data>
+  <data name="strPropertyNameFlowControl" xml:space="preserve">
+    <value>Flow Control</value>
+  </data>
+  <data name="strPropertyNameParityBit" xml:space="preserve">
+    <value>Parity Bit</value>
+  </data>
+  <data name="strPropertyNameStopBit" xml:space="preserve">
+    <value>Stop Bit</value>
+  </data>
 </root>
