@@ -2966,12 +2966,12 @@ namespace mRemoteNG {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public string Com {
+        public string ComPort {
             get {
-                return ((string)(this["Com"]));
+                return ((string)(this["ComPort"]));
             }
             set {
-                this["Com"] = value;
+                this["ComPort"] = value;
             }
         }
         
