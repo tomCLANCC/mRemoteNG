@@ -542,6 +542,7 @@ namespace mRemoteNG.Config.Serializers.Xml
                     connectionInfo.Favorite = xmlnode.GetAttributeAsBool("Favorite");
                     connectionInfo.UseVmId = xmlnode.GetAttributeAsBool("UseVmId");
                     connectionInfo.VmId = xmlnode.GetAttributeAsString("VmId");
+                    connectionInfo.FlowControl = xmlnode.GetAttributeAsString("FlowControl");
                     connectionInfo.UseEnhancedMode = xmlnode.GetAttributeAsBool("UseEnhancedMode");
                     connectionInfo.Inheritance.RedirectClipboard = xmlnode.GetAttributeAsBool("InheritRedirectClipboard");
                     connectionInfo.Inheritance.Favorite = xmlnode.GetAttributeAsBool("InheritFavorite");
@@ -550,6 +551,11 @@ namespace mRemoteNG.Config.Serializers.Xml
                     connectionInfo.Inheritance.UseVmId = xmlnode.GetAttributeAsBool("InheritUseVmId");
                     connectionInfo.Inheritance.VmId = xmlnode.GetAttributeAsBool("InheritVmId");
                     connectionInfo.Inheritance.UseEnhancedMode = xmlnode.GetAttributeAsBool("InheritUseEnhancedMode");
+                    connectionInfo.ComPort = xmlnode.GetAttributeAsString("ComPort");
+                    connectionInfo.DataBits = xmlnode.GetAttributeAsString("DataBits");
+                    connectionInfo.Speed = xmlnode.GetAttributeAsString("Speed");
+                    connectionInfo.ParityBit = xmlnode.GetAttributeAsString("ParityBit");
+                    connectionInfo.StopBit = xmlnode.GetAttributeAsString("StopBit");
                 }
             }
             catch (Exception ex)

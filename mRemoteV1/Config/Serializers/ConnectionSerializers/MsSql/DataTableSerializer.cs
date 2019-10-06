@@ -199,6 +199,11 @@ namespace mRemoteNG.Config.Serializers.MsSql
             dataTable.Columns.Add("InheritRdpVersion", typeof(bool));
             dataTable.Columns.Add("EnhancedMode", typeof(bool));
             dataTable.Columns.Add("InheritEnhancedMode", typeof(bool));
+            dataTable.Columns.Add("ComPort", typeof(string));
+            dataTable.Columns.Add("DataBits", typeof(string));
+            dataTable.Columns.Add("ParityBit", typeof(string));
+            dataTable.Columns.Add("StopBit", typeof(string));
+            dataTable.Columns.Add("FlowControl", typeof(string));
         }
 
         private void SetPrimaryKey(DataTable dataTable)
@@ -294,7 +299,11 @@ namespace mRemoteNG.Config.Serializers.MsSql
             dataRow["RDGatewayPassword"] = _cryptographyProvider.Encrypt(connectionInfo.RDGatewayPassword, _encryptionKey);
             dataRow["RDGatewayDomain"] = connectionInfo.RDGatewayDomain;
             dataRow["RdpVersion"] = connectionInfo.RdpVersion;
-
+            dataRow["ComPort"] = connectionInfo.ComPort;
+            dataRow["DataBits"] = connectionInfo.DataBits;
+            dataRow["ParityBit"] = connectionInfo.ParityBit;
+            dataRow["StopBit"] = connectionInfo.StopBit;
+            dataRow["FlowControl"] = connectionInfo.FlowControl;
 
             if (_saveFilter.SaveInheritance)
             {

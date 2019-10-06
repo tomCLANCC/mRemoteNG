@@ -351,6 +351,18 @@ namespace mRemoteNGTests.UI.Window.ConfigWindowTests
                         nameof(ConnectionInfo.Port),
                     });
                     break;
+                case ProtocolType.Serial:
+                    expectedProperties.Remove(nameof(ConnectionInfo.Hostname));
+                    expectedProperties.AddRange(new[]
+                    {
+                        nameof(ConnectionInfo.ComPort),
+                        nameof(ConnectionInfo.Speed),
+                        nameof(ConnectionInfo.DataBits),
+                        nameof(ConnectionInfo.ParityBit),
+                        nameof(ConnectionInfo.StopBit),
+                        nameof(ConnectionInfo.FlowControl),
+                    });
+                    break;
                 case ProtocolType.IntApp:
                     expectedProperties.AddRange(new[]
                     {

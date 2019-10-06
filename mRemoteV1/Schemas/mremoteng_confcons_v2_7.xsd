@@ -99,6 +99,12 @@
         <xs:attribute name="RDGatewayUsername" type="xs:string" use="required" />
         <xs:attribute name="RDGatewayPassword" type="xs:string" use="required" />
         <xs:attribute name="RDGatewayDomain" type="xs:string" use="required" />
+        <xs:attribute name="ComPort" type="xs:string" use="required" />
+        <xs:attribute name="Speed" type="xs:string" use="required" />
+        <xs:attribute name="DataBits" type="xs:string" use="required" />
+        <xs:attribute name="ParityBit" type="xs:string" use="required" />
+        <xs:attribute name="StopBit" type="xs:string" use="required" />
+        <xs:attribute name="FlowControl" type="xs:string" use="required" />
         <xs:attribute name="InheritCredentialRecord" type="xs:boolean" use="optional" />
         <xs:attribute name="InheritCacheBitmaps" type="xs:boolean" use="optional" />
         <xs:attribute name="InheritColors" type="xs:boolean" use="optional" />

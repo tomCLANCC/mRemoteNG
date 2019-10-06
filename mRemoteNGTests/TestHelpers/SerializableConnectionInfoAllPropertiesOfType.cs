@@ -66,5 +66,11 @@
 		public TType VNCViewOnly { get; set; }
         public TType RdpVersion { get; set; }
         public TType UseEnhancedMode { get; set; }
+        public TType ComPort { get; set; }
+        public TType Speed { get; set; }
+        public TType DataBits { get; set; }
+        public TType ParityBit { get; set; }
+        public TType StopBit { get; set; }
+        public TType FlowControl { get; set; }
     }
 }

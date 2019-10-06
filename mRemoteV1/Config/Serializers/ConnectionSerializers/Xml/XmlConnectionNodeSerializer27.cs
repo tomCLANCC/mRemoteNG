@@ -127,6 +127,12 @@ namespace mRemoteNG.Config.Serializers.Xml
             element.Add(new XAttribute("VNCProxyType", connectionInfo.VNCProxyType));
             element.Add(new XAttribute("VNCProxyIP", connectionInfo.VNCProxyIP));
             element.Add(new XAttribute("VNCProxyPort", connectionInfo.VNCProxyPort));
+            element.Add(new XAttribute("ComPort", connectionInfo.ComPort));
+            element.Add(new XAttribute("Speed", connectionInfo.Speed));
+            element.Add(new XAttribute("DataBits", connectionInfo.DataBits));
+            element.Add(new XAttribute("ParityBit", connectionInfo.ParityBit));
+            element.Add(new XAttribute("StopBit", connectionInfo.StopBit));
+            element.Add(new XAttribute("FlowControl", connectionInfo.FlowControl));
 
             element.Add(_saveFilter.SaveUsername
                             ? new XAttribute("VNCProxyUsername", connectionInfo.VNCProxyUsername)
