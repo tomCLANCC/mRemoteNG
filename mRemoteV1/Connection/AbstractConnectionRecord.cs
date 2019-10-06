@@ -41,6 +41,8 @@ namespace mRemoteNG.Connection
         private HTTPBase.RenderingEngine _renderingEngine;
         private bool _useCredSsp;
         private bool _useVmId;
+        private string _comSpeed = "";
+        private string _comPort = "";
 
         private RDGatewayUsageMethod _rdGatewayUsageMethod;
         private string _rdGatewayHostname;
@@ -136,7 +138,7 @@ namespace mRemoteNG.Connection
         [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 2),
          LocalizedAttributes.LocalizedDisplayName(nameof(Language.strPropertyNameAddress)),
          LocalizedAttributes.LocalizedDescription(nameof(Language.strPropertyDescriptionAddress)),
-         UsedInAllProtocolsExcept()]
+         UsedInAllProtocolsExcept(ProtocolType.Serial)]
         public virtual string Hostname
         {
             get => _hostname.Trim();
@@ -146,7 +148,7 @@ namespace mRemoteNG.Connection
         [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 2),
          LocalizedAttributes.LocalizedDisplayName(nameof(Language.strPropertyNamePort)),
          LocalizedAttributes.LocalizedDescription(nameof(Language.strPropertyDescriptionPort)),
-         UsedInAllProtocolsExcept(ProtocolType.ICA)]
+         UsedInAllProtocolsExcept(ProtocolType.ICA, ProtocolType.Serial)]
         public virtual int Port
         {
             get => GetPropertyValue("Port", _port);
@@ -156,7 +158,7 @@ namespace mRemoteNG.Connection
         [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 2),
          LocalizedAttributes.LocalizedDisplayName(nameof(Language.strPropertyNameUsername)),
          LocalizedAttributes.LocalizedDescription(nameof(Language.strPropertyDescriptionUsername)),
-         UsedInAllProtocolsExcept(ProtocolType.VNC, ProtocolType.Telnet, ProtocolType.Rlogin, ProtocolType.RAW)]
+         UsedInAllProtocolsExcept(ProtocolType.VNC, ProtocolType.Telnet, ProtocolType.Rlogin, ProtocolType.RAW, ProtocolType.Serial)]
         public virtual string Username
         {
             get => GetPropertyValue("Username", _username);
@@ -167,7 +169,7 @@ namespace mRemoteNG.Connection
          LocalizedAttributes.LocalizedDisplayName(nameof(Language.strPropertyNamePassword)),
          LocalizedAttributes.LocalizedDescription(nameof(Language.strPropertyDescriptionPassword)),
          PasswordPropertyText(true),
-         UsedInAllProtocolsExcept(ProtocolType.Telnet, ProtocolType.Rlogin, ProtocolType.RAW)]
+         UsedInAllProtocolsExcept(ProtocolType.Telnet, ProtocolType.Rlogin, ProtocolType.RAW, ProtocolType.Serial)]
         public virtual string Password
         {
             get => GetPropertyValue("Password", _password);
@@ -182,6 +184,26 @@ namespace mRemoteNG.Connection
         {
             get => GetPropertyValue("Domain", _domain).Trim();
             set => SetField(ref _domain, value?.Trim(), "Domain");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 2),
+        LocalizedAttributes.LocalizedDisplayName(nameof(Language.strPropertyNameCom)),
+        LocalizedAttributes.LocalizedDescription(nameof(Language.strPropertyDescriptionCom)),
+        UsedInProtocol(ProtocolType.Serial)]
+        public string ComPort
+        {
+            get => GetPropertyValue("COM", _comPort).Trim();
+            set => SetField(ref _comPort, value?.Trim(), "COM");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 2),
+        LocalizedAttributes.LocalizedDisplayName(nameof(Language.strPropertyNameSpeed)),
+        LocalizedAttributes.LocalizedDescription(nameof(Language.strPropertyDescriptionSpeed)),
+        UsedInProtocol(ProtocolType.Serial)]
+        public string Speed
+        {
+            get => GetPropertyValue("Speed", _comSpeed).Trim();
+            set => SetField(ref _comSpeed, value?.Trim(), "Speed");
         }
 
         [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 2),

@@ -59,7 +59,9 @@ namespace mRemoteNG.Connection
 
             try
             {
-                if (connectionInfo.Hostname == "" && connectionInfo.Protocol != ProtocolType.IntApp)
+                if (connectionInfo.Hostname == ""
+                    && connectionInfo.Protocol != ProtocolType.IntApp
+                    && connectionInfo.Protocol != ProtocolType.Serial)
                 {
                     Runtime.MessageCollector.AddMessage(MessageClass.WarningMsg,
                                                         Language.strConnectionOpenFailedNoHostname);

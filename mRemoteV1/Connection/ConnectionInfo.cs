@@ -14,6 +14,7 @@ using mRemoteNG.Connection.Protocol.Rlogin;
 using mRemoteNG.Connection.Protocol.SSH;
 using mRemoteNG.Connection.Protocol.Telnet;
 using mRemoteNG.Connection.Protocol.VNC;
+using mRemoteNG.Connection.Protocol.Serial;
 using mRemoteNG.Container;
 using mRemoteNG.Tree;
 
@@ -70,6 +71,7 @@ namespace mRemoteNG.Connection
             SetRedirectDefaults();
             SetMiscDefaults();
             SetVncDefaults();
+            SetSerialDefaults();
             SetNonBrowsablePropertiesDefaults();
             SetDefaults();
         }
@@ -362,6 +364,12 @@ namespace mRemoteNG.Connection
             MacAddress = Settings.Default.ConDefaultMacAddress;
             UserField = Settings.Default.ConDefaultUserField;
             Favorite = Settings.Default.ConDefaultFavorite;
+        }
+
+        private void SetSerialDefaults()
+        {
+            ComPort = Settings.Default.ComPort;
+            Speed = Settings.Default.Speed;
         }
 
         private void SetVncDefaults()

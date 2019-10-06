@@ -71,7 +71,13 @@ namespace mRemoteNG.Connection.Protocol
 
                 if (!(InterfaceControl.Info is PuttySessionInfo))
                 {
+
                     arguments.Add("-" + PuttyProtocol);
+
+                    if (PuttyProtocol == Putty_Protocol.serial)
+                    {
+                        arguments.Add(InterfaceControl.Info.ComPort.ToString());
+                    }
 
                     if (PuttyProtocol == Putty_Protocol.ssh)
                     {
