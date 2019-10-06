@@ -368,12 +368,12 @@ namespace mRemoteNG.Connection
 
         private void SetSerialDefaults()
         {
-            ComPort = Settings.Default.ComPort;
-            Speed = Settings.Default.Speed;
-            DataBits = Settings.Default.DataBits;
-            ParityBit = Settings.Default.ParityBit;
-            StopBit = Settings.Default.StopBit;
-            FlowControl = Settings.Default.FlowControl;
+            ComPort = Settings.Default.ConComPort;
+            Speed = Settings.Default.ConSpeed;
+            DataBits = Settings.Default.ConDataBits;
+            ParityBit = Settings.Default.ConParityBit;
+            StopBit = Settings.Default.ConStopBit;
+            FlowControl = Settings.Default.ConFlowControl;
         }
 
         private void SetVncDefaults()

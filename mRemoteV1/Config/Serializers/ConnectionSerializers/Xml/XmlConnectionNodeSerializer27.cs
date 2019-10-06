@@ -305,6 +305,18 @@ namespace mRemoteNG.Config.Serializers.Xml
                     connectionInfo.Inheritance.UseVmId.ToString().ToLowerInvariant()));
                 element.Add(new XAttribute("InheritUseEnhancedMode",
                     connectionInfo.Inheritance.UseEnhancedMode.ToString().ToLowerInvariant()));
+                element.Add(new XAttribute("InheritComPort",
+                           connectionInfo.Inheritance.ComPort.ToString().ToLowerInvariant()));
+                element.Add(new XAttribute("InheritSpeed",
+                                           connectionInfo.Inheritance.Speed.ToString().ToLowerInvariant()));
+                element.Add(new XAttribute("InheritDataBits",
+                                           connectionInfo.Inheritance.DataBits.ToString().ToLowerInvariant()));
+                element.Add(new XAttribute("InheritParityBit",
+                                           connectionInfo.Inheritance.ParityBit.ToString().ToLowerInvariant()));
+                element.Add(new XAttribute("InheritStopBit",
+                                           connectionInfo.Inheritance.StopBit.ToString().ToLowerInvariant()));
+                element.Add(new XAttribute("InheritFlowControl",
+                                           connectionInfo.Inheritance.FlowControl.ToString().ToLowerInvariant()));
             }
             else
             {
@@ -366,6 +378,12 @@ namespace mRemoteNG.Config.Serializers.Xml
                 element.Add(new XAttribute("InheritRDGatewayUsername", falseString));
                 element.Add(new XAttribute("InheritRDGatewayPassword", falseString));
                 element.Add(new XAttribute("InheritRDGatewayDomain", falseString));
+                element.Add(new XAttribute("InheritComPort", falseString));
+                element.Add(new XAttribute("InheritSpeed", falseString));
+                element.Add(new XAttribute("InheritDataBits", falseString));
+                element.Add(new XAttribute("InheritParityBit", falseString));
+                element.Add(new XAttribute("InheritStopBit", falseString));
+                element.Add(new XAttribute("InheritFlowControl", falseString));
             }
         }
     }

@@ -2966,72 +2966,72 @@ namespace mRemoteNG {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public string ComPort {
+        public string ConComPort {
             get {
-                return ((string)(this["ComPort"]));
+                return ((string)(this["ConComPort"]));
             }
             set {
-                this["ComPort"] = value;
+                this["ConComPort"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("9600")]
-        public string Speed {
+        public string ConSpeed {
             get {
-                return ((string)(this["Speed"]));
+                return ((string)(this["ConSpeed"]));
             }
             set {
-                this["Speed"] = value;
+                this["ConSpeed"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("8")]
-        public string DataBits {
+        public string ConDataBits {
             get {
-                return ((string)(this["DataBits"]));
+                return ((string)(this["ConDataBits"]));
             }
             set {
-                this["DataBits"] = value;
+                this["ConDataBits"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("n")]
-        public string ParityBit {
+        public string ConParityBit {
             get {
-                return ((string)(this["ParityBit"]));
+                return ((string)(this["ConParityBit"]));
             }
             set {
-                this["ParityBit"] = value;
+                this["ConParityBit"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public string StopBit {
+        public string ConStopBit {
             get {
-                return ((string)(this["StopBit"]));
+                return ((string)(this["ConStopBit"]));
             }
             set {
-                this["StopBit"] = value;
+                this["ConStopBit"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("N")]
-        public string FlowControl {
+        public string ConFlowControl {
             get {
-                return ((string)(this["FlowControl"]));
+                return ((string)(this["ConFlowControl"]));
             }
             set {
-                this["FlowControl"] = value;
+                this["ConFlowControl"] = value;
             }
         }
     }

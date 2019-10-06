@@ -737,22 +737,22 @@
     <Setting Name="CloseToTray" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="ComPort" Type="System.String" Scope="User">
+    <Setting Name="ConComPort" Type="System.String" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
-    <Setting Name="Speed" Type="System.String" Scope="User">
+    <Setting Name="ConSpeed" Type="System.String" Scope="User">
       <Value Profile="(Default)">9600</Value>
     </Setting>
-    <Setting Name="DataBits" Type="System.String" Scope="User">
+    <Setting Name="ConDataBits" Type="System.String" Scope="User">
       <Value Profile="(Default)">8</Value>
     </Setting>
-    <Setting Name="ParityBit" Type="System.String" Scope="User">
+    <Setting Name="ConParityBit" Type="System.String" Scope="User">
       <Value Profile="(Default)">n</Value>
     </Setting>
-    <Setting Name="StopBit" Type="System.String" Scope="User">
+    <Setting Name="ConStopBit" Type="System.String" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
-    <Setting Name="FlowControl" Type="System.String" Scope="User">
+    <Setting Name="ConFlowControl" Type="System.String" Scope="User">
       <Value Profile="(Default)">N</Value>
     </Setting>
   </Settings>

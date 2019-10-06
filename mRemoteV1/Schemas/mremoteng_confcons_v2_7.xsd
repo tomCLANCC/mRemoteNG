@@ -167,5 +167,11 @@
         <xs:attribute name="InheritRDGatewayUsername" type="xs:boolean" use="optional" />
         <xs:attribute name="InheritRDGatewayPassword" type="xs:boolean" use="optional" />
         <xs:attribute name="InheritRDGatewayDomain" type="xs:boolean" use="optional" />
+		<xs:attribute name="InheritComPort" type="xs:boolean" use="required" />
+        <xs:attribute name="InheritSpeed" type="xs:boolean" use="required" />
+        <xs:attribute name="InheritDataBits" type="xs:boolean" use="required" />
+        <xs:attribute name="InheritParityBit" type="xs:boolean" use="required" />
+        <xs:attribute name="InheritStopBit" type="xs:boolean" use="required" />
+        <xs:attribute name="InheritFlowControl" type="xs:boolean" use="required" />
     </xs:complexType>
 </xs:schema>

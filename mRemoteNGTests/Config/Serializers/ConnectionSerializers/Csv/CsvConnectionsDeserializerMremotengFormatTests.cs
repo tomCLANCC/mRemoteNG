@@ -126,7 +126,13 @@ namespace mRemoteNGTests.Config.Serializers.ConnectionSerializers.Csv
                 VNCSmartSizeMode = ProtocolVNC.SmartSizeMode.SmartSAspect,
                 VNCViewOnly = true,
                 RDGatewayUsageMethod = RDGatewayUsageMethod.Detect,
-                RDGatewayUseConnectionCredentials = RDGatewayUseConnectionCredentials.SmartCard
+                RDGatewayUseConnectionCredentials = RDGatewayUseConnectionCredentials.SmartCard,
+                ComPort = "1",
+                Speed = "9600",
+                DataBits = "8",
+                ParityBit = "n",
+                StopBit = "1",
+                FlowControl = "N"
             };
         }
 

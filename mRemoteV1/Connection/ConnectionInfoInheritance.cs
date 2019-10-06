@@ -84,6 +84,42 @@ namespace mRemoteNG.Connection
          TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
         public bool Port { get; set; }
 
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 3),
+        LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.strPropertyNameCom)),
+        LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.strPropertyDescriptionCom)),
+        TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        public bool ComPort { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 3),
+        LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.strPropertyNameSpeed)),
+        LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.strPropertyDescriptionSpeed)),
+        TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        public bool Speed { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 3),
+        LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.strPropertyNameDataBits)),
+        LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.strPropertyDescriptionDataBits)),
+        TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        public bool DataBits { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 3),
+        LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.strPropertyNameParityBit)),
+        LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.strPropertyDescriptionParityBit)),
+        TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        public bool ParityBit { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 3),
+        LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.strPropertyNameStopBit)),
+        LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.strPropertyDescriptionStopBit)),
+        TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        public bool StopBit { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.strCategoryConnection), 3),
+        LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.strPropertyNameFlowControl)),
+        LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.strPropertyDescriptionFlowControl)),
+        TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        public bool FlowControl { get; set; }
+
         #endregion
 
         #region Protocol

@@ -128,6 +128,15 @@ namespace mRemoteNG.Config.Serializers.Csv
             connectionRecord.RDGatewayHostname = headers.Contains("RDGatewayHostname")
                 ? connectionCsv[headers.IndexOf("RDGatewayHostname")]
                 : "";
+            connectionRecord.ComPort =
+                headers.Contains("ComPort") ? connectionCsv[headers.IndexOf("ComPort")]
+                : "";
+            connectionRecord.ComPort = headers.Contains("ComPort") ? connectionCsv[headers.IndexOf("ComPort")] : "";
+            connectionRecord.Speed = headers.Contains("Speed") ? connectionCsv[headers.IndexOf("Speed")] : "";
+            connectionRecord.DataBits = headers.Contains("DataBits") ? connectionCsv[headers.IndexOf("DataBits")] : "";
+            connectionRecord.ParityBit = headers.Contains("ParityBit") ? connectionCsv[headers.IndexOf("ParityBit")] : "";
+            connectionRecord.StopBit = headers.Contains("StopBit") ? connectionCsv[headers.IndexOf("StopBit")] : "";
+            connectionRecord.FlowControl = headers.Contains("FlowControl") ? connectionCsv[headers.IndexOf("FlowControl")] : "";
 
             if (headers.Contains("Protocol"))
             {
@@ -815,6 +824,48 @@ namespace mRemoteNG.Config.Serializers.Csv
                 bool value;
                 if (bool.TryParse(connectionCsv[headers.IndexOf("InheritRdpVersion")], out value))
                     connectionRecord.Inheritance.RdpVersion = value;
+            }
+
+            if (headers.Contains("InheritComPort"))
+            {
+                bool value;
+                if (bool.TryParse(connectionCsv[headers.IndexOf("InheritComPort")], out value))
+                    connectionRecord.Inheritance.ComPort = value;
+            }
+
+            if (headers.Contains("InheritSpeed"))
+            {
+                bool value;
+                if (bool.TryParse(connectionCsv[headers.IndexOf("InheritSpeed")], out value))
+                    connectionRecord.Inheritance.Speed = value;
+            }
+
+            if (headers.Contains("InheritDataBits"))
+            {
+                bool value;
+                if (bool.TryParse(connectionCsv[headers.IndexOf("InheritDataBits")], out value))
+                    connectionRecord.Inheritance.DataBits = value;
+            }
+
+            if (headers.Contains("InheritParityBit"))
+            {
+                bool value;
+                if (bool.TryParse(connectionCsv[headers.IndexOf("InheritParityBit")], out value))
+                    connectionRecord.Inheritance.ParityBit = value;
+            }
+
+            if (headers.Contains("InheritStopBit"))
+            {
+                bool value;
+                if (bool.TryParse(connectionCsv[headers.IndexOf("InheritStopBit")], out value))
+                    connectionRecord.Inheritance.StopBit = value;
+            }
+
+            if (headers.Contains("InheritFlowControl"))
+            {
+                bool value;
+                if (bool.TryParse(connectionCsv[headers.IndexOf("InheritFlowControl")], out value))
+                    connectionRecord.Inheritance.FlowControl = value;
             }
 
             #endregion

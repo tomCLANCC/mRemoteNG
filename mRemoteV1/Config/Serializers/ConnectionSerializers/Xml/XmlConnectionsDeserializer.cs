@@ -370,7 +370,7 @@ namespace mRemoteNG.Config.Serializers.Xml
                     connectionInfo.Inheritance.RedirectSmartCards =
                         xmlnode.GetAttributeAsBool("InheritRedirectSmartCards");
                     connectionInfo.Inheritance.RedirectSound = xmlnode.GetAttributeAsBool("InheritRedirectSound");
-                    connectionInfo.Inheritance.RedirectAudioCapture = xmlnode.GetAttributeAsBool("RedirectAudioCapture");
+                    connectionInfo.Inheritance.RedirectAudioCapture = xmlnode.GetAttributeAsBool("InheritRedirectAudioCapture");
                     connectionInfo.Inheritance.Resolution = xmlnode.GetAttributeAsBool("InheritResolution");
                     connectionInfo.Inheritance.UseConsoleSession =
                         xmlnode.GetAttributeAsBool("InheritUseConsoleSession");
@@ -556,6 +556,12 @@ namespace mRemoteNG.Config.Serializers.Xml
                     connectionInfo.Speed = xmlnode.GetAttributeAsString("Speed");
                     connectionInfo.ParityBit = xmlnode.GetAttributeAsString("ParityBit");
                     connectionInfo.StopBit = xmlnode.GetAttributeAsString("StopBit");
+                    connectionInfo.Inheritance.ComPort = xmlnode.GetAttributeAsBool("InheritComPort");
+                    connectionInfo.Inheritance.DataBits = xmlnode.GetAttributeAsBool("InheritDataBits");
+                    connectionInfo.Inheritance.Speed = xmlnode.GetAttributeAsBool("InheritSpeed");
+                    connectionInfo.Inheritance.ParityBit = xmlnode.GetAttributeAsBool("InheritParityBit");
+                    connectionInfo.Inheritance.StopBit = xmlnode.GetAttributeAsBool("InheritStopBit");
+                    connectionInfo.Inheritance.FlowControl = xmlnode.GetAttributeAsBool("InheritFlowControl");
                 }
             }
             catch (Exception ex)

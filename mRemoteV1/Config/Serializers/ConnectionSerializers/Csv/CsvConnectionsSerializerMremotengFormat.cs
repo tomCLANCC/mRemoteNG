@@ -61,7 +61,7 @@ namespace mRemoteNG.Config.Serializers.Csv
                       "CacheBitmaps;RedirectDiskDrives;RedirectPorts;RedirectPrinters;RedirectClipboard;RedirectSmartCards;RedirectSound;RedirectKeys;" +
                       "PreExtApp;PostExtApp;MacAddress;UserField;ExtApp;Favorite;VNCCompression;VNCEncoding;VNCAuthMode;VNCProxyType;VNCProxyIP;" +
                       "VNCProxyPort;VNCProxyUsername;VNCProxyPassword;VNCColors;VNCSmartSizeMode;VNCViewOnly;RDGatewayUsageMethod;RDGatewayHostname;" +
-                      "RDGatewayUseConnectionCredentials;RDGatewayUsername;RDGatewayPassword;RDGatewayDomain;RedirectAudioCapture;RdpVersion;");
+                      "RDGatewayUseConnectionCredentials;RDGatewayUsername;RDGatewayPassword;RDGatewayDomain;RedirectAudioCapture;RdpVersion;ComPort;Speed;DataBits;ParityBit;StopBit;FlowControl;");
 
             if (_saveFilter.SaveInheritance)
                 sb.Append("InheritCacheBitmaps;InheritColors;InheritDescription;InheritDisplayThemes;InheritDisplayWallpaper;" +
@@ -74,7 +74,7 @@ namespace mRemoteNG.Config.Serializers.Csv
                           "InheritVNCProxyPort;InheritVNCProxyUsername;InheritVNCProxyPassword;InheritVNCColors;InheritVNCSmartSizeMode;InheritVNCViewOnly;" +
                           "InheritRDGatewayUsageMethod;InheritRDGatewayHostname;InheritRDGatewayUseConnectionCredentials;InheritRDGatewayUsername;" +
                           "InheritRDGatewayPassword;InheritRDGatewayDomain;InheritRDPAlertIdleTimeout;InheritRDPMinutesToIdleTimeout;InheritSoundQuality;" +
-                          "InheritRedirectAudioCapture;InheritRdpVersion");
+                          "InheritRedirectAudioCapture;InheritRdpVersion;InheritComPort;InheritSpeed;InheritDataBits;InheritParityBit;InheritStopBit;InheritFlowControl;");
         }
 
         private void SerializeNodesRecursive(ConnectionInfo node, StringBuilder sb)
@@ -167,7 +167,13 @@ namespace mRemoteNG.Config.Serializers.Csv
               .Append(FormatForCsv(con.RDGatewayPassword))
               .Append(FormatForCsv(con.RDGatewayDomain))
               .Append(FormatForCsv(con.RedirectAudioCapture))
-              .Append(FormatForCsv(con.RdpVersion));
+              .Append(FormatForCsv(con.RdpVersion))
+              .Append(FormatForCsv(con.ComPort))
+              .Append(FormatForCsv(con.Speed))
+              .Append(FormatForCsv(con.DataBits))
+              .Append(FormatForCsv(con.ParityBit))
+              .Append(FormatForCsv(con.StopBit))
+              .Append(FormatForCsv(con.FlowControl));
 
 
             if (!_saveFilter.SaveInheritance)
@@ -233,7 +239,13 @@ namespace mRemoteNG.Config.Serializers.Csv
               .Append(FormatForCsv(con.Inheritance.RDPMinutesToIdleTimeout))
               .Append(FormatForCsv(con.Inheritance.SoundQuality))
               .Append(FormatForCsv(con.Inheritance.RedirectAudioCapture))
-              .Append(FormatForCsv(con.Inheritance.RdpVersion));
+              .Append(FormatForCsv(con.Inheritance.RdpVersion))
+              .Append(FormatForCsv(con.Inheritance.ComPort))
+              .Append(FormatForCsv(con.Inheritance.Speed))
+              .Append(FormatForCsv(con.Inheritance.DataBits))
+              .Append(FormatForCsv(con.Inheritance.ParityBit))
+              .Append(FormatForCsv(con.Inheritance.StopBit))
+              .Append(FormatForCsv(con.Inheritance.FlowControl));
         }
 
         private string FormatForCsv(object value)
